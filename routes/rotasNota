@@ -4,5 +4,6 @@ var controllerNota = require('../controller/controllerNota.js');
 
 // GET Cria Nota. 
 router.get('/cria', controllerNota.cria_get);
+router.post('/cria', controllerNota.cria_post);
 
 module.exports = router;

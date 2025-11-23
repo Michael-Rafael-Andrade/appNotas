@@ -3,8 +3,8 @@
 <ul>
     <!-- each é como um laço for, percorrendo todas as notas -->
     {{#each notas}} 
-        <li>{{this.chave_nota}}
-            <a href="/nota/consulta/{{this.chave}}">{{this.titulo}}</a>
+        <li>{{chave}}:
+            <a href="/nota/consulta/{{chave}}">{{titulo}}</a>
         </li>
     {{/each}}
 </ul>
