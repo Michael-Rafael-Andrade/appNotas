@@ -12,7 +12,7 @@ exports.cria_get = async function(req, res){
 }
 
 // cria e já exporta a função que será responsável pela criação de nota
-exports.cria post = async function(req, res){
+exports.cria_post = async function(req, res){
     // obtém as informações do formulário
     var chave = req.body.chave; // req.body.(name do formulario); = captura os dados digitados no campo input name=chave;
     var titulo = req.body.titulo;
