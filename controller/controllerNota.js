@@ -25,3 +25,19 @@ exports.cria_post = async function(req, res){
     //redireciona para a página principal
     res.redirect('/');
 }
+
+// cria e já exporta a função que será responsável pela consulta a nota
+exports.cosulta = async function(req, res){
+    // informação passada como parâmetro na url
+    var chave = req.params.chave_nota;
+    var nota = await notas.consulta(chave);
+
+    contexto = {
+        titulo_pagina: "Consulta a Nota",
+        chave: nota.chave,
+        titulo: nota.titulo,
+        texto: nota.texto,
+    }
+    // renderiza o arquivo dentro da pasta view
+    res.render('consultaNota', contexto);
+}
