@@ -6,4 +6,10 @@ var controllerNota = require('../controller/controllerNota.js');
 router.get('/cria', controllerNota.cria_get);
 router.post('/cria', controllerNota.cria_post);
 
+/* GET Consulta nota. */
+router.get('/consulta/:chave_nota', controllerNota.consulta);
+
+/* GET Altera Nota. */
+router.get('/altera/:chave_nota', controllerNota.altera_get);
+
 module.exports = router;

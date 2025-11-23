@@ -1,6 +1,7 @@
 // importação da classe que gerencia as notas na memória
 const notas = require('../model/notaMemoria.js');
 
+
 // cria e já exporta a função que será responsável pela criação de nota
 exports.cria_get = async function(req, res){
     contexto = {
@@ -27,7 +28,7 @@ exports.cria_post = async function(req, res){
 }
 
 // cria e já exporta a função que será responsável pela consulta a nota
-exports.cosulta = async function(req, res){
+exports.consulta = async function(req, res){
     // informação passada como parâmetro na url
     var chave = req.params.chave_nota;
     var nota = await notas.consulta(chave);
@@ -40,4 +41,21 @@ exports.cosulta = async function(req, res){
     }
     // renderiza o arquivo dentro da pasta view
     res.render('consultaNota', contexto);
+}
+
+// cria e já exporta a função que será responsável pela alteração de nota
+exports.altera_get = async function(req, res){
+    // informação passada como parâmetro na url
+    var chave = req.params.chave_nota;
+    var nota = await notas.consulta(chave);
+
+    contexto = {
+        titulo_pagina: "Altera a Nota",
+        chave: nota.chave,
+        titulo: nota.titulo,
+        texto: nota.texto,
+    }
+
+    // renderiza o arquivo dentro da pasta view
+    res.render('alteraNota', contexto);
 }

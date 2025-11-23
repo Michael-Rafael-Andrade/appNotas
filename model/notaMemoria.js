@@ -21,7 +21,7 @@ class NotaMemoria {
     async deleta(chave) {
         if (lista_notas[chave]) {
             delete lista_notas[chave];
-        } else throw new Error(`Nota com a chave chave ${chave} não existe`);
+        } else throw new Error(`Nota com a chave ${chave} não existe`);
     }
     async lista() {
         return Object.values(lista_notas);
