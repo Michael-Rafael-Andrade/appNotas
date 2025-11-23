@@ -17,6 +17,7 @@ exports.cria_post = async function(req, res){
     var chave = req.body.chave; // req.body.(name do formulario); = captura os dados digitados no campo input name=chave;
     var titulo = req.body.titulo;
     var texto = req.body.texto;
+// body = o express encapsula todos os campos dentro do body e para acessar utilize o name do campo input do formulário.
 
     // cria a nota nota
     await notas.cria(chave, titulo, texto);
