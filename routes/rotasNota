@@ -4,6 +4,8 @@ var controllerNota = require('../controller/controllerNota.js');
 
 // GET Cria Nota. 
 router.get('/cria', controllerNota.cria_get);
+
+// POST Cria Nota.
 router.post('/cria', controllerNota.cria_post);
 
 /* GET Consulta nota. */
@@ -17,6 +19,5 @@ router.post('/altera/:chave_nota', controllerNota.altera_post);
 
 // GET Exclui Nota.
 router.get('/deleta/:chave_nota', controllerNota.deleta);
-
 
 module.exports = router;
