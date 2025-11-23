@@ -12,4 +12,11 @@ router.get('/consulta/:chave_nota', controllerNota.consulta);
 /* GET Altera Nota. */
 router.get('/altera/:chave_nota', controllerNota.altera_get);
 
+// POST Altera Nota.
+router.post('/altera/:chave_nota', controllerNota.altera_post);
+
+// GET Exclui Nota.
+router.get('/deleta/:chave_nota', controllerNota.deleta);
+
+
 module.exports = router;
